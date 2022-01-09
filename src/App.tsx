@@ -4,6 +4,8 @@ import './App.css';
 
 import {motion} from "framer-motion";
 import Collapsible from "./Collapsible";
+import Filter from "./Filter";
+import {data} from "./data";
 
 // function App() {
 //
@@ -112,21 +114,34 @@ import Collapsible from "./Collapsible";
 //   );
 // }
 
+// function App() {
+//
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//          <Collapsible
+//           title={'Click on me'}
+//          >
+//            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+//            At beatae eos, impedit in laudantium minima modi nemo officiis quasi reiciendis.
+//            Deleniti eligendi esse omnis quae quam, sit tempore ut voluptas!
+//          </Collapsible>
+//       </header >
+//     </div>
+//   );
+// }
 
 function App() {
 
-  return (
-    <div className="App">
-      <header className="App-header">
-         <Collapsible
-          title={'Click on me'}
-         >
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-           At beatae eos, impedit in laudantium minima modi nemo officiis quasi reiciendis.
-           Deleniti eligendi esse omnis quae quam, sit tempore ut voluptas!
-         </Collapsible>
-      </header >
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <Filter
+                    data={data}
+                />
+            </header >
+        </div>
+    );
 }
+
 export default App;
