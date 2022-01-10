@@ -52,4 +52,12 @@ export const data: DataType[] = [
         category: 'people',
         title: 'Ivan'
     },
+    {
+        category: 'people',
+        title: 'Ilya'
+    },
+    {
+        category: 'people',
+        title: 'Angelina'
+    },
 ]

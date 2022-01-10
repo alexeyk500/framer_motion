@@ -7,12 +7,14 @@ const Menu:React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0)
 
     return (
-        <div
+        <motion.div
+            layout
             style={{
                 display: 'flex',
                 backgroundColor: '#eee',
                 padding: '1rem',
-                borderRadius: '25px'
+                borderRadius: '25px',
+                marginBottom: '50px'
             }}
         >
             <AnimateSharedLayout>
@@ -27,7 +29,7 @@ const Menu:React.FC = () => {
                     ))
                 }
             </AnimateSharedLayout>
-        </div>
+        </motion.div>
     );
 };
 
@@ -66,8 +68,9 @@ const ActiveLine: React.FC = () => {
             style={{
                 position: 'absolute',
                 bottom: '-6px',
-                width: '100%',
+                width: 'calc(100% - 20px)',
                 height: '4px',
+                left: '10px',
                 backgroundColor: 'rgb(255,0,0)',
             }}
         />

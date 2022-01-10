@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {motion} from "framer-motion";
+import {AnimateSharedLayout, motion} from "framer-motion";
 import Collapsible from "./Collapsible";
 import Filter from "./Filter";
 import {data} from "./data";
@@ -132,28 +132,32 @@ import Menu from "./Menu";
 //   );
 // }
 
+function App() {
+
+    return (
+        <AnimateSharedLayout>
+        <motion.div layout className="App">
+                <motion.header layout className="App-header">
+                    <Menu />
+
+                    <Filter
+                        data={data}
+                    />
+                </motion.header >
+        </motion.div>
+        </AnimateSharedLayout>
+    );
+}
+
 // function App() {
 //
 //     return (
 //         <div className="App">
 //             <header className="App-header">
-//                 <Filter
-//                     data={data}
-//                 />
+//                 <Menu />
 //             </header >
 //         </div>
 //     );
 // }
-
-function App() {
-
-    return (
-        <div className="App">
-            <header className="App-header">
-                <Menu />
-            </header >
-        </div>
-    );
-}
 
 export default App;
