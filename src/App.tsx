@@ -6,6 +6,7 @@ import {motion} from "framer-motion";
 import Collapsible from "./Collapsible";
 import Filter from "./Filter";
 import {data} from "./data";
+import Menu from "./Menu";
 
 // function App() {
 //
@@ -131,14 +132,25 @@ import {data} from "./data";
 //   );
 // }
 
+// function App() {
+//
+//     return (
+//         <div className="App">
+//             <header className="App-header">
+//                 <Filter
+//                     data={data}
+//                 />
+//             </header >
+//         </div>
+//     );
+// }
+
 function App() {
 
     return (
         <div className="App">
             <header className="App-header">
-                <Filter
-                    data={data}
-                />
+                <Menu />
             </header >
         </div>
     );
